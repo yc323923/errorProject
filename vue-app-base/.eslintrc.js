@@ -1,0 +1,16 @@
+module.exports = {
+    env: {
+        browser: true,
+        es2021: true,
+    },
+    extends: ['plugin:vue/essential', 'standard', '@vue/prettier'],
+    parserOptions: {
+        ecmaVersion: 12,
+        sourceType: 'module',
+    },
+    plugins: ['vue'],
+    rules: {
+        semi: [2, 'never'],
+        quotes: [2, 'single', { allowTemplateLiterals: true }],
+    },
+}

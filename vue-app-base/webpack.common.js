@@ -17,6 +17,11 @@ module.exports = {
             test: /\.js$/,
             loader: 'babel-loader',
         },{
+            test: /\.js$/,
+            loader: 'eslint-loader',
+            enforce:'pre'
+        },
+        {
             test: /\.png$/,
             loader: 'url-loader',
             options:{
@@ -52,10 +57,10 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     optimization:{
-        // usedExports:true,
-        // minimize:true,
-        // splitChunks:{
-        //     chunks:"all"
-        // }
+        usedExports:true,
+        minimize:true,
+        splitChunks:{
+            chunks:"all"
+        }
     }
 }
